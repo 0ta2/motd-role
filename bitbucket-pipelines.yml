@@ -9,3 +9,5 @@ pipelines:
           - pip3 install molecule ansible docker
           - export LANG=en_US.utf8
           - /usr/local/bin/molecule --debug test
+        services:
+          - docker
