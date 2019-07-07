@@ -1,0 +1,6 @@
+---
+### ログイン時に表示する内容を追加する
+- name: Copy file /etc/motd
+  copy:
+    src: motd
+    dest: /etc/motd

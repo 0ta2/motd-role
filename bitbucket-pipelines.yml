@@ -1,0 +1,11 @@
+---
+image: ansible/centos7-ansible
+
+pipelines:
+  default:
+    - step:
+        script:
+          - yum -y update && yum install -y python-pip
+          - pip install molecule ansible
+          - molecule/default
+          - molecule test
