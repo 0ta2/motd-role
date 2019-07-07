@@ -5,7 +5,7 @@ pipelines:
   default:
     - step:
         script:
-          - yum -y update && yum install -y python36-pip python36-devel openssl-devel
+          - yum -y update && yum install -y python36-pip python36-devel openssl-devel gcc
           - pip3 install molecule ansible
           - molecule/default
           - molecule test
