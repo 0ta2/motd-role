@@ -8,4 +8,4 @@ pipelines:
           - yum -y update && yum install -y python36-pip python36-devel openssl-devel gcc
           - pip3 install molecule ansible
           - cd molecule/default
-          - molecule test
+          - /usr/local/bin/molecule test
