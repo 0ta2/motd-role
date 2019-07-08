@@ -3,3 +3,4 @@
   hosts: all
   roles:
     - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
+    # https://github.com/ansible/molecule/issues/1567
