@@ -1,6 +1,4 @@
 ---
-dependency:
-  name: galaxy
 driver:
   name: docker
 lint:
@@ -10,8 +8,22 @@ platforms:
     image: centos:7
 provisioner:
   name: ansible
+  config_options:
+    diff:
+      always: true
   lint:
     name: ansible-lint
+scenario:
+  name: default
+  check_sequence:
+    - lint
+    - destroy
+    - dependency
+    - syntax
+    - create
+    - prepare
+    - check
+    - destroy
 verifier:
   name: goss
   lint:
