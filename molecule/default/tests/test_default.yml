@@ -2,7 +2,7 @@
 
 ---
 file:
-  /etc/hosts:
+  /etc/motd:
     exists: true
     owner: root
     group: root
