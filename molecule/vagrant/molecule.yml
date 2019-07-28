@@ -51,5 +51,3 @@ verifier:
     options:
       config-file: ${MOLECULE_PROJECT_DIRECTORY}/molecule/shared/yaml-lint.yml
   directory: ../shared/tests/
-  additional_filer_or_dirs:
-    - ../shared/tests/*.yml
