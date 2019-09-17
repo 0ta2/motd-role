@@ -1,1 +1,25 @@
+---
+galaxy_info:
+  author: 0ta2
+  description: Setup message of the day
 
+  license: "license (MIT)"
+
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+
+  galaxy_tags:
+    - system
+
+dependencies: []

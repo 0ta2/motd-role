@@ -60,4 +60,4 @@ prd の場合
 License
 -------
 
-BSD
+MIT
