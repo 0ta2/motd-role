@@ -7,7 +7,7 @@ anchors:
     machine: true
     environment:
       PIPENV_VENV_IN_PROJECT: true
-    working_directory: ~/mysql57-role
+    working_directory: ~/motd-role
 
   RESTORE_CACHE: &RESTORE_CACHE
     restore_cache:
