@@ -1,3 +1,7 @@
+[![GitHub issues](https://img.shields.io/github/issues/0ta2/motd-role)](https://github.com/0ta2/motd-role/issues)
+[![GitHub stars](https://img.shields.io/github/stars/0ta2/motd-role)](https://github.com/0ta2/motd-role/stargazers)
+![CircleCI](https://img.shields.io/circleci/build/github/0ta2/motd-role/master)
+
 motd-role
 =========
 
@@ -60,4 +64,4 @@ prd の場合
 License
 -------
 
-BSD
+MIT
