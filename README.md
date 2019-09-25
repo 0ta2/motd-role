@@ -1,7 +1,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/0ta2/motd-role)](https://github.com/0ta2/motd-role/issues)
 [![GitHub stars](https://img.shields.io/github/stars/0ta2/motd-role)](https://github.com/0ta2/motd-role/stargazers)
-![CircleCI](https://img.shields.io/circleci/build/github/0ta2/motd-role/master?token=2df5d802de684ea6d2e04972e018a60091755d80)
-![Ansible Role](https://img.shields.io/ansible/role/43413)
+[![CircleCI](https://img.shields.io/circleci/build/github/0ta2/motd-role/master)](https://circleci.com/gh/0ta2/motd-role)
+[![Ansible Role](https://img.shields.io/ansible/role/43413)](https://galaxy.ansible.com/0ta2/motd_role)
 
 motd-role
 =========
