@@ -1,9 +1,9 @@
-[![GitHub issues](https://img.shields.io/github/issues/0ta2/motd-role)](https://github.com/0ta2/motd-role/issues)
-[![GitHub stars](https://img.shields.io/github/stars/0ta2/motd-role)](https://github.com/0ta2/motd-role/stargazers)
-[![CircleCI](https://img.shields.io/circleci/build/github/0ta2/motd-role/master)](https://circleci.com/gh/0ta2/motd-role)
+[![GitHub issues](https://img.shields.io/github/issues/0ta2/motd_role)](https://github.com/0ta2/motd_role/issues)
+[![GitHub stars](https://img.shields.io/github/stars/0ta2/motd_role)](https://github.com/0ta2/motd_role/stargazers)
+![GitHub Actions](https://github.com/0ta2/motd_role/workflows/Molecule%20Test/badge.svg)
 [![Ansible Role](https://img.shields.io/ansible/role/43413)](https://galaxy.ansible.com/0ta2/motd_role)
 
-motd-role
+motd_role
 =========
 
 ログイン時に表示する `/etc/motd` を設定するロールです｡
@@ -55,4 +55,4 @@ None.
 License
 -------
 
-![GitHub](https://img.shields.io/github/license/0ta2/motd-role)
+![GitHub](https://img.shields.io/github/license/0ta2/motd_role)
