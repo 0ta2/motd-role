@@ -5,11 +5,23 @@
     dest: "/etc/update-motd.d/99-footer"
     owner: "root"
     group: "root"
-    motd: "0755"
+    mode: "0755"
+  when: ansible_distribution == "Ubuntu"
+
+- name: Copy file /etc/motd.tail
+  template:
+    src: "motd.j2"
+    dest: "/etc/motd"
+    owner: "root"
+    group: "root"
+    mode: "0755"
   when: ansible_distribution == "Ubuntu"
 
 - name: Copy file /etc/motd
   template:
     src: "motd.j2"
     dest: "/etc/motd"
+    owner: "root"
+    group: "root"
+    mode: "0755"
   when: ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
