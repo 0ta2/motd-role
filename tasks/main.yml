@@ -1,6 +1,27 @@
 ---
-# ログイン時に表示する内容を追加する
+- name: Copy file /etc/update-motd.d/99-footer
+  copy:
+    src: "99-footer"
+    dest: "/etc/update-motd.d/99-footer"
+    owner: "root"
+    group: "root"
+    mode: "0755"
+  when: ansible_distribution == "Ubuntu"
+
+- name: Copy file /etc/motd.tail
+  template:
+    src: "motd.j2"
+    dest: "/etc/motd.tail"
+    owner: "root"
+    group: "root"
+    mode: "0755"
+  when: ansible_distribution == "Ubuntu"
+
 - name: Copy file /etc/motd
   template:
-    src: motd.j2
-    dest: /etc/motd
+    src: "motd.j2"
+    dest: "/etc/motd"
+    owner: "root"
+    group: "root"
+    mode: "0755"
+  when: ansible_distribution == "CentOS" or ansible_distribution == "RedHat"

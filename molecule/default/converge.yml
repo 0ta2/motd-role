@@ -1,0 +1,8 @@
+---
+- name: Converge
+  hosts: all
+
+  tasks:
+    - name: "Include motd_role"
+      include_role:
+        name: "motd_role"

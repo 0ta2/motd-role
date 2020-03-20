@@ -1,0 +1,51 @@
+---
+- name: Verify
+  hosts: all
+  tasks:
+  - name: Check 99-footer file.
+    stat:
+      path: "/etc/update-motd.d/99-footer"
+    register: "_99_footer"
+    when: ansible_distribution == "Ubuntu"
+
+  - name: Test if 99-footer file is exists.
+    assert:
+      that:
+        - _99_footer.stat.exists
+        - _99_footer.stat.isreg
+        - _99_footer.stat.mode == "0755"
+        - _99_footer.stat.gr_name == "root"
+        - _99_footer.stat.pw_name == "root"
+    when: ansible_distribution == "Ubuntu"
+
+  - name: Check motd.tail file.
+    stat:
+      path: "/etc/motd.tail"
+    register: "_motd_tail"
+    when: ansible_distribution == "Ubuntu"
+
+  - name: Test if motd.tail file is exists.
+    assert:
+      that:
+        - _motd_tail.stat.exists
+        - _motd_tail.stat.isreg
+        - _motd_tail.stat.mode == "0755"
+        - _motd_tail.stat.gr_name == "root"
+        - _motd_tail.stat.pw_name == "root"
+    when: ansible_distribution == "Ubuntu"
+
+  - name: Check motd file.
+    stat:
+      path: "/etc/motd"
+    register: "_motd"
+    when: ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
+
+  - name: Test if motd file is exists.
+    assert:
+      that:
+        - _motd.stat.exists
+        - _motd.stat.isreg
+        - _motd.stat.mode == "0755"
+        - _motd.stat.gr_name == "root"
+        - _motd.stat.pw_name == "root"
+    when: ansible_distribution == "CentOS" or ansible_distribution == "RedHat"

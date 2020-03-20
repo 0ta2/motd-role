@@ -4,3 +4,16 @@ motd_info:
   - " Distro:  ": "{{ ansible_distribution }} {{ ansible_distribution_version }}"
   - " CPUs:    ": "{{ ansible_processor_vcpus }}"
   - " RAM:     ": "{{ (ansible_memtotal_mb / 1000) | round(1) }}GB"
+
+motd_content: |
+
+  /\  __ \   /\ "-.\ \   /\  ___\   /\ \   /\  == \   /\ \       /\  ___\
+  \ \  __ \  \ \ \-.  \  \ \___  \  \ \ \  \ \  __<   \ \ \____  \ \  __\
+   \ \_\ \_\  \ \_\\"\_\  \/\_____\  \ \_\  \ \_____\  \ \_____\  \ \_____\
+    \/_/\/_/   \/_/ \/_/   \/_____/   \/_/   \/_____/   \/_____/   \/_____/
+
+  {% for item in motd_info %}
+  {% for key, value in item.items() | list %}
+  {{ key }}{{ value }}
+  {% endfor %}
+  {% endfor %}
