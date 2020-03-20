@@ -5,17 +5,17 @@
   - name: Check 99-footer file.
     stat:
       path: "/etc/update-motd.d/99-footer"
-    register: "_99-footer"
+    register: "_99_footer"
     when: ansible_distribution == "Ubuntu"
 
   - name: Test if 99-footer file is exists.
     assert:
       that:
-        - _99-footer.stat.exists
-        - _99-footer.stat.isreg
-        - _99-footer.stat.mode == "0755"
-        - _99-footer.stat.gr_name == "root"
-        - _99-footer.stat.pw_name == "root"
+        - _99_footer.stat.exists
+        - _99_footer.stat.isreg
+        - _99_footer.stat.mode == "0755"
+        - _99_footer.stat.gr_name == "root"
+        - _99_footer.stat.pw_name == "root"
     when: ansible_distribution == "Ubuntu"
 
   - name: Check motd.tail file.
