@@ -1,0 +1,5 @@
+setuptools
+ansible
+molecule
+docker
+molecule-docker
